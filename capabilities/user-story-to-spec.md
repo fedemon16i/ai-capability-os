@@ -58,6 +58,23 @@ The generated spec has two layers:
 
 When the user story references a specific UI or flow, Claude can generate an HTML prototype with annotations explaining how each element responds to a requirement — visible to non-technical stakeholders without reading the spec.
 
+## Acceptance criteria format (Gherkin)
+
+Cada escenario en la spec sigue este patrón — validado en [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts):
+
+```
+Scenario: [nombre del caso]
+  Given [precondición / estado del sistema]
+  When  [acción que dispara el comportamiento]
+  Then  [resultado observable y verificable]
+```
+
+**Split signal:** si un escenario necesita múltiples `When` o múltiples `Then`, es señal de que la historia debe dividirse. Claude marca esto automáticamente en la Coverage Analysis.
+
+**Regla de actor:** el usuario del escenario debe coincidir con el persona de la user story. Si no coinciden, la AC es incorrecta.
+
+---
+
 ## The synthesis prompt
 
 ```
@@ -93,6 +110,18 @@ After generating, add a Coverage Analysis:
 - What did you have to infer or assume?
 - What is ambiguous or contradictory?
 - What is missing that could cause rework?
+- Label each gap as **Assumption** or **Open Question** — never invent facts to fill gaps.
+
+Then add a Closing Self-Critique:
+- Strongest section: [which section is best supported by the story]
+- Weakest section: [which section had the most inference]
+- Top 3 assumptions to validate before building
+
+Finally, offer these four next steps (let me choose):
+1. Generate scope cuts (up/down — smaller or larger version of this story)
+2. Check for split signals and suggest how to split
+3. Generate a test case checklist from the acceptance criteria
+4. Write the stakeholder brief as a standalone email
 
 Do NOT generate the annotated visual unless explicitly asked.
 ```
@@ -145,9 +174,14 @@ Parse the story for explicit requirements, inferred requirements, and gaps. Stru
 |------|---------|---------|------|
 | | | | |
 
+## Sources incorporados
+
+- [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts) — user-story-prompt-template.md (Mike Cohn + Gherkin + split signals, CC BY-NC-SA 4.0) y prd-prompt-template.md (9-section PRD, closing self-critique). Validados en Claude/ChatGPT/Gemini.
+- [Ponytail score 8/10] encapsula: estructuración, Gherkin, split detection, dual-audience writing, gap labeling.
+
 ## Notes
 
-- **The Coverage Analysis is the highest-value output.** Engineers build from requirements. Federico's value is in catching the gaps before building starts. The Coverage Analysis is where Claude earns its keep — it surfaces what Federico would have missed in a rushed review.
+- **The Coverage Analysis es el output de mayor valor.** Engineers build from requirements. Federico's value is in catching the gaps before building starts. The Coverage Analysis is where Claude earns its keep — it surfaces what Federico would have missed in a rushed review.
 - **Confidence signal:** ask Claude to rate its confidence in each requirement (high/medium/low based on how explicitly the story supports it). Low-confidence requirements need a conversation before building.
 - **Iterative use:** generate the full spec, then use follow-up prompts to drill into specific sections: "Rewrite the edge cases for the role of [user type X]" or "What would the QA test cases look like for requirement 3?"
 - **Annotated visual:** when the story references a specific UI, the annotated HTML page is a powerful stakeholder communication tool — it shows exactly how each element connects to a requirement, without requiring the stakeholder to read the spec.

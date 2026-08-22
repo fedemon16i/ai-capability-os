@@ -1,6 +1,6 @@
 # Handoff — 2026-08-22
 
-**Prioridad actual:** Ponytail de ejecución confirmados por research real. Research completado. Próximo: Playwright en portfolio + Pendo MCP Prompt Library.
+**Prioridad actual:** Extracción de skills públicos completa. Próximo: capabilities/mixpanel-skills.md + Playwright en portfolio.
 
 ---
 
@@ -14,7 +14,18 @@
 
 ---
 
-## Hallazgos del research (para que el próximo agente no repita)
+## Hallazgos verificados (no rehacer)
+
+`sources/ecosystem-skills-catalog.md` tiene el catálogo completo con URLs, estado de acceso, y qué quedó bloqueado.
+
+| Completado | Estado |
+|------------|--------|
+| DESIGN.md portfolio | Creado |
+| user-story-to-spec.md | Expandida con Gherkin + split signals + closing self-critique (deanpeters material) |
+| Mixpanel deep-research + analyze-report | Contenido completo disponible — falta crear capability |
+| ecosystem-skills-catalog.md | Creado en sources/ |
+
+## Candidatos verificados (para que el próximo agente no repita)
 
 | Candidato | URL | Estado |
 |-----------|-----|--------|
@@ -29,9 +40,9 @@
 ## Próximo agente debe
 
 1. **Si es Claude Code:**
-   - Instalar Playwright en el portfolio (`npm init playwright@latest`) — es la única tarea de QA desbloqueada
-   - Agregar triggers obligatorios en `CLAUDE.md` del portfolio (antes de CSS → `/design-system-discipline`, antes de animación → verificar `--spring`)
-   - Curar 3–4 prompts de product-manager-prompts y fusionar con `capabilities/user-story-to-spec.md`
+   - Crear `capabilities/mixpanel-skills.md` — contenido completo de deep-research + analyze-report ya está en sources/ecosystem-skills-catalog.md
+   - Instalar Playwright en el portfolio (`npm init playwright@latest`)
+   - Agregar triggers obligatorios en `CLAUDE.md` del portfolio
 
 2. **Si es Grok o cualquier LLM sobre Product:**
    - El user story → spec tiene material nuevo en `product-manager-prompts` (deanpeters, 119 assets validados)

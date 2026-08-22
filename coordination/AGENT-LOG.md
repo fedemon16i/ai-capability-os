@@ -4,6 +4,12 @@ Historial de trabajo por agente/LLM. Más reciente primero.
 
 ---
 
+## 2026-08-22 — Claude Code (Extracción de skills públicos del ecosistema)
+
+- Hizo: Navegó GitHub + web en 5 ramas (Analytics, Design/UI, Product, Coding Agents, FE/BE). Extrajo contenido real de: mixpanel/ai-plugins (12 skills, 2 con contenido completo: deep-research + analyze-report), deanpeters/product-manager-prompts (user-story + PRD templates con texto completo). Creó sources/ecosystem-skills-catalog.md con 8 candidatos Ponytail. Expandió capabilities/user-story-to-spec.md con Gherkin, split signals, closing self-critique.
+- Resultado: Catálogo de hallazgos verificados. user-story-to-spec.md expandida con material de calidad real (CC BY-NC-SA). Bloqueados documentados sin pedir acción a Federico.
+- Pendiente / siguiente: Crear capabilities/mixpanel-skills.md con deep-research + analyze-report (contenido completo disponible). Federico visita pendo.io y mixpanel.com/blog para los prompts de analytics.
+
 ## 2026-08-22 — Claude Code (Research Cycle: Ecosystem Skills + Ponytail discovery)
 
 - Hizo: Research de 5 ramas en paralelo (Analytics, Design/UI, Product, Coding Agents, FE/BE). Fuentes: GitHub, web. Criterio: solo recursos con adopción real. Creó DESIGN.md en el portfolio basado en shared.css — el Ponytail de diseño más directo encontrado. Identificó 5 candidatos Ponytail con evidencia real.

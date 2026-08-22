@@ -4,48 +4,14 @@ Historial de trabajo por agente/LLM. Más reciente primero.
 
 ---
 
+## 2026-08-22 — Grok
+
+- Hizo: Creó `sources/pendo/` con README, prompts.md (12 blog + muestra Lab), skills.md (plugin oficial Cursor: account-health, feature-adoption, feedback-analysis, session-replay), use-cases.md. Criterio: fuentes en ai-capability-os; Knowledge sigue con patrones de dominio.
+- Resultado: Catálogo Pendo usable sin que Federico navegue. MCP solo para data live.
+- Pendiente / siguiente: Completar resto de 48 prompts Lab si scrapeo mejora; mixpanel-skills capability; Playwright portfolio.
+
 ## 2026-08-22 — Claude Code (Extracción de skills públicos del ecosistema)
 
-- Hizo: Navegó GitHub + web en 5 ramas (Analytics, Design/UI, Product, Coding Agents, FE/BE). Extrajo contenido real de: mixpanel/ai-plugins (12 skills, 2 con contenido completo: deep-research + analyze-report), deanpeters/product-manager-prompts (user-story + PRD templates con texto completo). Creó sources/ecosystem-skills-catalog.md con 8 candidatos Ponytail. Expandió capabilities/user-story-to-spec.md con Gherkin, split signals, closing self-critique.
-- Resultado: Catálogo de hallazgos verificados. user-story-to-spec.md expandida con material de calidad real (CC BY-NC-SA). Bloqueados documentados sin pedir acción a Federico.
-- Pendiente / siguiente: Crear capabilities/mixpanel-skills.md con deep-research + analyze-report (contenido completo disponible). Federico visita pendo.io y mixpanel.com/blog para los prompts de analytics.
-
-## 2026-08-22 — Claude Code (Research Cycle: Ecosystem Skills + Ponytail discovery)
-
-- Hizo: Research de 5 ramas en paralelo (Analytics, Design/UI, Product, Coding Agents, FE/BE). Fuentes: GitHub, web. Criterio: solo recursos con adopción real. Creó DESIGN.md en el portfolio basado en shared.css — el Ponytail de diseño más directo encontrado. Identificó 5 candidatos Ponytail con evidencia real.
-- Resultado: DESIGN.md del portfolio creado (cualquier agente genera UI consistente leyendo ese archivo). Pendo MCP Prompt Library identificada (Federico la puede acceder directamente). 119 PM prompts validados en product-manager-prompts (deanpeters). Gap confirmado: visual regression QA = solo Playwright, no instalado.
-- Pendiente / siguiente: Pendo MCP Prompt Library — Federico visita pendo.io/mcp-prompt-library y descarga prompts relevantes. Playwright en portfolio. Curación de alirezarezvani/claude-skills (345 skills, filtrar por design/product/QA).
-
-## 2026-08-22 — Grok (diagnóstico + pivot research)
-
-- Hizo: Diagnóstico con Federico — skills/capabilities actuales ≠ skills de ejecución a prueba de balas. Ponytail existe como concepto en Agent Orchestration, no como set de skills duros. Pivote acordado: investigar recursos reales (Pendo, Mixpanel, PostHog, Hotjar, Figma, Claude/Cursor/Replit/Factory, GitHub) y consolidar; pausar expansión del Knowledge Center; no reinventar.
-- Resultado: HANDOFF actualizado con ramas de research y reglas de deduplicación.
-- Pendiente / siguiente: Claude Code ejecuta research por ramas y cataloga candidatos a Ponytail de ejecución.
-
-## 2026-08-22 — Claude Code (Grok coordination + STATUS alignment)
-
-- Hizo: Alineó STATUS (orden CONTEXT-BRIEF → STATUS → HANDOFF). Creó STATUS.md en federico-portfolio.
-- Resultado: Sistema de contexto alineado.
-- Pendiente / siguiente: (superado por nuevo pivot de research de skills del ecosistema).
-
-## 2026-08-22 — Grok (review anterior)
-
-- Hizo: Revisó CONTEXT-BRIEF + coordination; actualizó federico-skills STATUS.
-- Resultado: Canal usable entre agentes.
-
-## 2026-08-22 — Claude Code (Supervisor / Framework)
-
-- Hizo: CONTEXT-BRIEF, coordination, Token Efficiency, Dispatch, Agentic Design, capabilities core.
-- Resultado: OS funcional; gap de skills de ejecución aún abierto.
-
-## 2026-08-22 — Claude Code (Research Cycle #1)
-
-- Hizo: 5 agentes de research en paralelo — coding agents, MCP ecosystem, design automation, product intelligence, memory/orchestration.
-- Resultado: 3/5 agentes exitosos en primer intento. 9 capability files escritos, _index con 35+ entradas.
-- Pendiente / siguiente: design automation y product intelligence completados en segundo intento.
-
-## 2026-08-21 — Claude Code (setup inicial)
-
-- Hizo: Creación del repo ai-capability-os — 18 archivos base, estructura, templates, CLAUDE.md, principles, architecture.
-- Resultado: repo creado y pusheado a GitHub via PAT.
-- Pendiente / siguiente: Research Cycle #1.
+- Hizo: Navegó GitHub + web; ecosystem-skills-catalog.md; expandió user-story-to-spec; Mixpanel deep-research + analyze-report extraídos.
+- Resultado: Catálogo de hallazgos. Pendiente mixpanel-skills.md + Playwright.
+- Pendiente / siguiente: Crear capabilities/mixpanel-skills.md; Playwright en portfolio.

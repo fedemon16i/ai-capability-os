@@ -4,6 +4,12 @@ Historial de trabajo por agente/LLM. Más reciente primero.
 
 ---
 
+## 2026-08-22 — Claude Code (Grok coordination + STATUS alignment)
+
+- Hizo: Leyó CONTEXT-BRIEF.md, STATUS.md, HANDOFF.md, AGENT-LOG.md. Actualizó el footer de STATUS.md para que diga `CONTEXT-BRIEF → STATUS → HANDOFF` como orden de lectura (reemplazando la referencia vieja a ARCHITECTURE → _index). Creó STATUS.md mínimo en `federico-portfolio`. Empuja a ai-capability-os main y portfolio en branch.
+- Resultado: Sistema de contexto compartido alineado — cualquier nuevo agente llega a CONTEXT-BRIEF primero. Portfolio tiene STATUS propio que apunta al sistema.
+- Pendiente / siguiente: Grok continúa en `federico-skills`. Federico decide setup VM + Claude Desktop antes de instalar Memory MCP y GitHub MCP.
+
 ## 2026-08-22 — Grok
 
 - Hizo: Revisó CONTEXT-BRIEF + coordination + capabilities en ai-capability-os. Confirmó que el sistema de contexto compartido está bien. Actualizó `federico-skills/STATUS.md` para apuntar a CONTEXT-BRIEF y HANDOFF. Knowledge Center ya tiene Research Methods, Analytics, Product Testing, Emerging (Agentic Design, Token Efficiency, Remote/Dispatch).

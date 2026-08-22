@@ -62,4 +62,4 @@
 
 ---
 
-> **Para cualquier agente que lea esto:** leé STATUS.md → ARCHITECTURE.md → capabilities/_index.md en ese orden. No escribas al repo sin leer estos tres primero. El Supervisor es el único que hace commits finales.
+> **Para cualquier agente que lea esto:** leé `CONTEXT-BRIEF.md` → `STATUS.md` → `coordination/HANDOFF.md` en ese orden. No escribas al repo sin leer estos tres primero. El Supervisor es el único que hace commits finales.

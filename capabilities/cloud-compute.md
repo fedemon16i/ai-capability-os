@@ -122,6 +122,64 @@ Para agent workloads de Claude Code: **2 vCPU, 4 GB RAM mínimo**.
 - Hetzner CPX11 (2 vCPU, 2 GB) — $5/mes, funciona pero justo con múltiples tools simultáneos
 - Hetzner CX32 (4 vCPU, 8 GB) — $8/mes, cómodo sin ansiedad de recursos
 
+## Dispatch Mode — trabajar sin estar presente
+
+Dispatch mode es el patrón de trabajo donde Federico manda un brief claro a un agente que corre en una máquina remota y revisa los resultados después — sin monitorear el proceso en tiempo real.
+
+### Cuándo usar Dispatch Mode
+
+- Tareas largas (>30 min) que no requieren decisiones intermedias
+- Research cycles completos
+- Audits o sweeps sobre múltiples archivos
+- Cualquier task donde el output final es más importante que el proceso paso a paso
+
+### Requisitos de diseño para runs desatendidos
+
+| Requisito | Por qué |
+|-----------|---------|
+| **Brief completo y sin ambigüedad** | El agente no puede preguntar — si el brief es ambiguo, el agente asume o se bloquea |
+| **Output estructurado obligatorio** | El agente escribe el resultado en GitHub, un archivo, o un formato parseable — no en stdout que nadie ve |
+| **Error handling explícito** | El agente documenta lo que falló y por qué, en vez de fallar silenciosamente |
+| **Límites de tokens / steps** | Sin un bound, un agente desatendido puede consumir todos los tokens disponibles |
+| **Commit al finalizar** | El resultado debe sobrevivir al final de la sesión — push a GitHub o export a archivo |
+
+### Opciones de Dispatch Mode en 2026
+
+| Opción | Cómo funciona | Costo | Estado |
+|--------|--------------|-------|--------|
+| **Claude Code en VPS (SSH + tmux)** | Federico SSH-ea, lanza el task, cierra el iPad — el agente sigue en tmux | $8/mes (Hetzner) | Funciona hoy |
+| **Claude Code Remote Control** | Triggerear y monitorear agentes via API sin terminal abierta | Incluido en API | Disponible desde 2026 |
+| **Claude Code web sessions** | Sessions en la nube de Anthropic, no requiere VPS propio | Incluido en plan | Activo (pero expiran por inactividad) |
+| **Grok Build headless** | Grok corriendo en un cloud computer persistente | Según plan | Según lo que Grok ofrezca |
+
+### Template de brief para Dispatch Mode
+
+```markdown
+# Dispatch Brief — [nombre del task]
+
+**Objetivo:** [qué tiene que hacer el agente, específico]
+**Output esperado:** [dónde escribe el resultado — archivo, commit, PR]
+**Formato de output:** [JSON / Markdown / capability file / etc.]
+**Límites:**
+- Máximo steps: [N]
+- Si bloqueado: documentar el bloqueo en [archivo] y terminar limpio
+- No preguntar al humano — asumir [X] si ambiguo
+**Criterio de éxito:** [cómo sabe el agente que terminó correctamente]
+**Contexto mínimo:** [qué archivos leer — STATUS.md + los específicos, no el repo entero]
+```
+
+### Disciplina de tokens en runs desatendidos
+
+Los runs desatendidos son donde el token waste es más costoso — nadie está mirando para cortar un loop infinito. Aplicar siempre:
+- Bound explícito en steps y retries
+- Output estructurado (schema JSON) en vez de texto libre
+- El agente escribe `STATUS: COMPLETE | PARTIAL | BLOCKED` al final del output
+- Si hay budget object disponible: monitorear `budget.remaining()` en cada iteración
+
+Ver [Token Efficiency](token-efficiency.md) para el detalle completo.
+
+---
+
 ## Delegation level
 
 **3/5** — Federico provisiona el servidor (30 min, una vez). Claude Code genera los scripts de setup y configuración. Las tareas que corren en el server son completamente delegadas.

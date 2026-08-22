@@ -15,7 +15,11 @@
 
 ---
 
-## Últimos cambios importantes
+## Últimos cambios importantes (más recientes primero)
+
+- 2026-08-22: Token Efficiency capability — 7 técnicas de alto impacto (caching, model routing, bound loops, MCP pruning, output schema, context curado)
+- 2026-08-22: Dispatch Mode documentado en cloud-compute.md — template de brief para runs desatendidos
+- 2026-08-22: Agentic Design capability — 4 design questions, measurement framework, progressive autonomy
 
 - 2026-08-22: Framework Update — STATUS.md, Supervisor/Workers/QG architecture, error handling, Session Replay, UI Integrity Guardian, User Story → Spec
 - 2026-08-22: Agentic Design capability creada — diseño de productos con humanos + agentes

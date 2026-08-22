@@ -39,7 +39,8 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 | Memory MCP | **ADOPT** | 5/5 | 66/80 | [→](memory-mcp.md) |
 | GitHub MCP | **ADOPT** | 4/5 | 62/80 | [→](github-mcp.md) |
 | Claude Subagents / Agent Orchestration | **ADOPT** | 4/5 | 64/80 | [→](agent-orchestration.md) |
-| Cloud Compute para Agentes (Hetzner CX32) | **ADOPT** | 3/5 | 56/80 | [→](cloud-compute.md) |
+| Cloud Compute + Dispatch Mode (Hetzner CX32) | **ADOPT** | 3/5 | 56/80 | [→](cloud-compute.md) |
+| Token Efficiency & Cost Control | **ADOPT** | 3/5 | 60/80 | [→](token-efficiency.md) |
 | v0 by Vercel (UI prototyping) | **ADOPT** | 5/5 | 67/80 | [→](v0-ui-prototyping.md) |
 | n8n + AI Agent Nodes | **LEARN** | 3/5 | 54/80 | *(file pending)* |
 | Lovable (full-stack demos) | **LEARN** | 5/5 | 52/80 | *(file pending)* |

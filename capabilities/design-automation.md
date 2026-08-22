@@ -104,6 +104,28 @@ projects: [
 
 **Responsively App:** free desktop app that renders any URL in all viewports simultaneously. Best for interactive visual exploration during development — faster than browser DevTools for the 6-viewport sweep Federico already does manually.
 
+## Preventing design slop (companion skill: frontend-design)
+
+Playwright catches **regressions** — things that changed. But it can't catch "AI-generated aesthetics" — designs that are technically correct but visually generic.
+
+**`frontend-design`** ([anthropics/claude-code](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md), 796,950 installs) is the official Anthropic skill for this gap:
+
+**What it does:** antes de escribir cualquier CSS nuevo, activa el skill y adopta el rol de "design lead at a small studio — every client gets a visual identity that could not be mistaken for anyone else's." Fuerza un proceso de 2 pasos:
+1. Brainstorm: deriva colores, tipografía, layout y un elemento signature del propio subject matter del proyecto
+2. Critique: antes de escribir código, critica el sistema propuesto contra el brief
+
+**Lo que prohíbe explícitamente:**
+- Defaults plantillados sin importar el subject (cream backgrounds + serifs, near-black + acid accents, broadsheet layouts — a menos que el brief lo pida)
+- Decoración que no sirve al subject
+- Copy vago o ingenioso (solo específico y directo)
+- Motion disperso que contribuye al "AI-generated feeling"
+
+**Regla de uso para Federico:** invocar `/frontend-design` al empezar cualquier nueva sección de UI o componente. El portfolio tiene su `DESIGN.md` como sistema base — este skill los acompaña para que la decisión creativa dentro de ese sistema no sea genérica.
+
+**Instalar:** `npx skills add anthropics/claude-code --skill frontend-design`
+
+---
+
 ## When to use
 
 - After any CSS change that touches shared.css or layout components

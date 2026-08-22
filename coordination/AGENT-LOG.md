@@ -6,12 +6,11 @@ Historial de trabajo por agente/LLM. Más reciente primero.
 
 ## 2026-08-22 — Grok
 
-- Hizo: Creó `sources/pendo/` con README, prompts.md (12 blog + muestra Lab), skills.md (plugin oficial Cursor: account-health, feature-adoption, feedback-analysis, session-replay), use-cases.md. Criterio: fuentes en ai-capability-os; Knowledge sigue con patrones de dominio.
-- Resultado: Catálogo Pendo usable sin que Federico navegue. MCP solo para data live.
-- Pendiente / siguiente: Completar resto de 48 prompts Lab si scrapeo mejora; mixpanel-skills capability; Playwright portfolio.
+- Hizo: Amplió skill-marketplaces con ui-skills.com, aura.build/skills, mcpmarket.com. Shortlist prioritaria Producto → Storytelling → UI/UX → Presentaciones/ads. Candidatos: frontend-design, impeccable/taste (fusionar), shape, gsap-scrolltrigger-storytelling, slidev/pptx, Ad Creative Engine. Prompt listo para Claude en paralelo.
+- Resultado: Mapa de fuentes + anti-duplicados. tech-growth-2026 y pendo/ siguen vigentes.
+- Pendiente / siguiente: Claude Code cura e integra ~8 skills de alta señal; Grok puede seguir si Claude sin créditos.
 
-## 2026-08-22 — Claude Code (Extracción de skills públicos del ecosistema)
+## 2026-08-22 — Grok (Pendo sources)
 
-- Hizo: Navegó GitHub + web; ecosystem-skills-catalog.md; expandió user-story-to-spec; Mixpanel deep-research + analyze-report extraídos.
-- Resultado: Catálogo de hallazgos. Pendiente mixpanel-skills.md + Playwright.
-- Pendiente / siguiente: Crear capabilities/mixpanel-skills.md; Playwright en portfolio.
+- Hizo: sources/pendo/ (prompts, skills, use cases).
+- Resultado: Catálogo Pendo sin exigir navegación a Federico.

@@ -1,66 +1,38 @@
 # Handoff — 2026-08-22
 
-**Prioridad actual:** Extracción de skills públicos completa. Próximo: capabilities/mixpanel-skills.md + Playwright en portfolio.
+**Prioridad actual:** Integrar cadena de skills de alta adopción (grill-me → frontend-design → guidelines) sin inflar el índice
 
 ---
 
 ## Estado
 
-- ai-capability-os operativo (capabilities + arquitectura supervisada + CONTEXT-BRIEF + coordination)
-- federico-skills (Knowledge Center) en pausa de expansión — base ya útil
-- Canal de comunicación entre LLMs activo vía `coordination/`
-- **DESIGN.md creado en el portfolio** — cualquier agente lo lee y genera UI consistente con el design system real
-- Research de ecosystem completado: 5 ramas, 5 candidatos Ponytail con evidencia real
+- sources/pendo/, skill-marketplaces.md, tech-growth-2026.md, ecosystem-skills-catalog.md
+- **Nuevo:** `sources/priority-skills-shortlist.md` — top installs skills.sh vs stack propio
+- Knowledge Center en pausa
 
 ---
 
-## Hallazgos verificados (no rehacer)
+## Hallazgo clave (installs 2026)
 
-`sources/ecosystem-skills-catalog.md` tiene el catálogo completo con URLs, estado de acceso, y qué quedó bloqueado.
-
-| Completado | Estado |
-|------------|--------|
-| DESIGN.md portfolio | Creado |
-| user-story-to-spec.md | Expandida con Gherkin + split signals + closing self-critique (deanpeters material) |
-| Mixpanel deep-research + analyze-report | Contenido completo disponible — falta crear capability |
-| ecosystem-skills-catalog.md | Creado en sources/ |
-
-## Candidatos verificados (para que el próximo agente no repita)
-
-| Candidato | URL | Estado |
-|-----------|-----|--------|
-| DESIGN.md portfolio | `federico-portfolio/DESIGN.md` | **Creado** |
-| Pendo MCP Prompt Library | pendo.io/mcp-prompt-library | Federico visita directamente (proxy bloquea en sesión) |
-| product-manager-prompts | github.com/deanpeters/product-manager-prompts | STUDY — curar 3–4 prompts para user-story-to-spec.md |
-| alirezarezvani/claude-skills (345) | github.com/alirezarezvani/claude-skills | STUDY — filtrar por design/product/QA/handoff |
-| Handoff skill oficial | claudedirectory.org/skills/claude-skills-handoff | STUDY — consolidar con sistema coordination existente |
+Top producto/UI alineados a Federico:
+1. grill-me (~900k)
+2. frontend-design anthropics (~800k)
+3. handoff / prototype mattpocock (~630–650k)
+4. web-design-guidelines + vercel-react-best-practices
+5. Fusionar impeccable/taste en UN craft skill (no tres)
 
 ---
 
 ## Próximo agente debe
 
-1. **Si es Claude Code:**
-   - Crear `capabilities/mixpanel-skills.md` — contenido completo de deep-research + analyze-report ya está en sources/ecosystem-skills-catalog.md
-   - Instalar Playwright en el portfolio (`npm init playwright@latest`)
-   - Agregar triggers obligatorios en `CLAUDE.md` del portfolio
-
-2. **Si es Grok o cualquier LLM sobre Product:**
-   - El user story → spec tiene material nuevo en `product-manager-prompts` (deanpeters, 119 assets validados)
-   - El Ponytail de product ya está en `capabilities/user-story-to-spec.md` — expandir con las mejores 3 técnicas del repo, no reemplazar
-
-3. **Cualquier LLM nuevo:**
-   Leer CONTEXT-BRIEF.md → STATUS.md → coordination/HANDOFF.md → luego el repo del trabajo
+1. **Integrar** (no solo listar): documentar flujo grill-me → user-story-to-spec → frontend-design → UI Integrity / web-design-guidelines
+2. Elegir **un** craft skill (impeccable *o* taste) y linkearlo
+3. Opcional: mixpanel-skills.md si catálogo anterior lo tiene listo
+4. Playwright portfolio cuando entorno lo permita
+5. **No** clonar marketplaces ni sumar 50 capabilities
 
 ---
 
-## Blockers / Debt
+## Debt (sin tocar)
 
-| Item | Prioridad |
-|------|-----------|
-| Playwright install (portfolio) | Alta — desbloqueado ahora |
-| Pendo MCP Prompt Library | Alta — Federico visita pendo.io/mcp-prompt-library |
-| Memory MCP / GitHub MCP install | Alta (espera setup de Claude Desktop) |
-| Curar alirezarezvani/claude-skills | Media |
-| Springs.studio / DesignMD MCP | Media — bloqueado por proxy de sesión, investigar fuera |
-| Hetzner VM | Media |
-| APIs externas, n8n, Lovable test real | Después |
+VM, MCP install máquina Federico, APIs, Knowledge expansion masiva

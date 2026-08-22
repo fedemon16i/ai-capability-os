@@ -1,6 +1,8 @@
 # Skill Marketplaces (Agent Skills / SKILL.md) — 2026
 
-Índices para descubrir skills reales (Claude Code, Cursor, Codex, etc.). **No instalar cientos**: filtrar, evaluar, fusionar.
+Índices para descubrir skills reales. **No instalar cientos**: filtrar, evaluar, fusionar.
+
+**Prioridad de dominio para Federico:** Producto → Storytelling → UI/UX → Presentaciones/ads → (después) cloud/storage/API.
 
 ---
 
@@ -8,53 +10,66 @@
 
 | Fuente | URL | Qué es | Notas |
 |--------|-----|--------|-------|
-| **SkillsMP** | https://skillsmp.com / https://skillsmp.com/es/skills | Biblioteca masiva de Agent Skills (SKILL.md) para Claude/Codex | Filtros por categoría/ocupación; escala enorme → curar fuerte |
-| **Claude Market** | https://www.claudemarket.ai/ | Skills + MCP + plugins; CLI `npx claudemarket search` | ~4k+ skills; install commands |
-| **skills.sh (Vercel)** | skills.sh | Leaderboard por **installs reales** | Mejor señal de adopción que stars |
-| **AtCyrus Skills** | https://www.atcyrus.com/skills | Marketplace curado (dev, design, marketing, docs) | Menos ruido; categorías claras |
-| **dukelyuu/skills-marketplace** | https://github.com/dukelyuu/skills-marketplace | “npm for agent skills” open source | UI + sync GitHub; multi-IDE |
-| **LobeHub Skills** | https://lobehub.com/skills | Agregador grande | CLI install por agente |
-| **anthropics/skills** | GitHub Anthropic | Skills de referencia oficiales | frontend-design, skill-creator, etc. |
+| **UI Skills** | https://www.ui-skills.com/skills | ~221 skills de design engineering | **Alta prioridad UI/UX/motion/storytelling scroll** |
+| **Aura Skills** | https://www.aura.build/skills | Skills de diseño web (frontend-design, taste, artifacts) | Anti-slop; Meng To / Anthropic sources |
+| **MCP Market Skills** | https://mcpmarket.com/tools/skills | Skills + MCP hub (Claude/ChatGPT/Codex) | Incluye Ad Creative Engine, workflows |
+| **MCP Market** | https://mcpmarket.com | Servidores MCP | Cloud, APIs, tools — segunda oleada |
+| **SkillsMP** | https://skillsmp.com | Biblioteca masiva SKILL.md | Curar fuerte |
+| **Claude Market** | https://www.claudemarket.ai/ | Skills + MCP + CLI search | Install commands |
+| **skills.sh (Vercel)** | skills.sh | Ranking por installs reales | Mejor señal de adopción |
+| **AtCyrus** | https://www.atcyrus.com/skills | Curado (design, marketing, docs) | Menos ruido |
+| **dukelyuu/skills-marketplace** | GitHub | “npm for agent skills” | Multi-IDE |
+| **anthropics/skills** | GitHub | Oficiales | frontend-design, skill-creator |
+| **Pendo** | `sources/pendo/` | Prompts + skills analytics | Ya catalogado |
 
 ---
 
-## Skills de alta señal (descubrimiento 2026)
+## Shortlist ADOPT-candidatos (sin duplicar)
 
-| Skill | Origen típico | Para qué |
-|-------|---------------|----------|
-| **frontend-design** | anthropics/skills | UI con intención visual, no templates genéricos |
-| **ui-ux-pro-max** | SkillsMP / AtCyrus | UI/UX web-móvil, a11y, tipografía, design systems |
-| **skill-creator** | anthropics/skills | Crear/evaluar/optimizar skills |
-| **vercel-react-best-practices** | vercel-labs | React/Next performance |
-| **ppt-generation / pptx** | SkillsMP / docs skills | Presentaciones |
-| **handoff** | mattpocock/skills | Handoff entre agentes/sesiones |
-| **grill-me / prototype / tdd** | mattpocock/skills | Product thinking + delivery |
-| **baseline-ui / shadcn** | AtCyrus | Validar UI Tailwind/shadcn |
-| **hallmark / impeccable** | AtCyrus | Anti-slop design, polish UI |
-| **page-cro / seo-audit / copywriting** | AtCyrus Marketing | Growth / conversion |
-| **remotion** | AtCyrus | Video programático (React) |
-| **analytics-tracking** | AtCyrus | Setup analytics |
-| **browser-use / agent-browser** | varios | Navegación automatizada |
+### Producto + storytelling
+| Skill | Fuente | Por qué |
+|-------|--------|--------|
+| grill-me / prototype | mattpocock | Afinar producto antes de codear |
+| handoff | mattpocock | Handoff agentes (alineado a coordination/) |
+| shape | ui-skills | Briefs UX por entrevista estructurada |
+| gsap-scrolltrigger-storytelling | ui-skills | Storytelling por scroll |
+| better-writing / clarify | ui-skills | Microcopy producto |
+| Ad Creative Engine | mcpmarket | Ángulos de ads + test plan (growth) |
 
----
+### UI / UX (elegir 1 “anti-slop” + 1 motion + 1 layout)
+| Skill | Fuente | Nota de fusión |
+|-------|--------|----------------|
+| **frontend-design** | anthropics / Aura | Canónico anti-generic |
+| **impeccable** / taste-skill / hallmark | ui-skills / Aura / AtCyrus | **Fusionar en un solo Ponytail “UI craft”** |
+| better-layout / better-typography / polish | ui-skills | Sub-skills del craft |
+| landing-page-design / compact-landing / page-cro | ui-skills / AtCyrus | Landing + CRO |
+| animation-vocabulary / accessible-animation / page-transition | ui-skills | Motion + a11y |
+| create-design-md | ui-skills | Ya tenemos DESIGN.md en portfolio — reforzar |
 
-## Mapeo al research Tech & Growth 2026
+### Presentaciones / banners / ads
+| Skill / tool | Fuente | Uso |
+|--------------|--------|-----|
+| slidev / slide-wright / frontend-slides | ui-skills | Decks web/dev |
+| pptx / ppt-generation | SkillsMP / doc skills | PPT formal |
+| Gamma / Tome / Marp | tech-growth-2026.md | Builders de producto |
+| remotion | AtCyrus | Video en código |
+| Ad Creative Engine | mcpmarket | Publicidades multi-ángulo |
 
-| Área del prompt | Skills / fuentes a priorizar |
-|-----------------|------------------------------|
-| Presentation builders | ppt-generation, pptx, Gamma/Tome (tools, no solo skills) |
-| UX/UI modes, motion, a11y | ui-ux-pro-max, frontend-design, baseline-ui, hallmark |
-| Marketing / growth | page-cro, seo-audit, email-sequence, copywriting, analytics-tracking |
-| Video | remotion; tools: Runway/Sora/HeyGen (fuera de SKILL.md) |
-| Product features (cmdk, flags) | vercel-react-best-practices; PostHog Flags (capability existente) |
+### Cloud / storage / API (segunda oleada)
+| Tipo | Dónde buscar |
+|------|----------------|
+| MCP servers | mcpmarket.com (no skills de UI) |
+| PostHog / Pendo MCP | ya documentado |
+| Vercel / Cloudflare Workers | flags, edge (tech-growth-2026) |
 
 ---
 
 ## Regla de adopción
 
-1. Preferir skills con **installs** (skills.sh) o mantenedor serio (Anthropic, Vercel, mattpocock).
-2. Si dos skills hacen lo mismo → **uno** fusionado en nuestro sistema.
-3. Guardar candidatos en `sources/` o capability; no clonar marketplaces enteros.
-4. Skills viejos del portfolio sin evidencia → sospechosos hasta revalidar.
+1. **Producto + UI + storytelling primero**; cloud/API después.
+2. Preferir installs (skills.sh) o mantenedor serio (Anthropic, ui-skills, mattpocock).
+3. Dos skills iguales → **uno** en nuestro sistema.
+4. No clonar marketplaces enteros.
+5. Inferiores / genéricos / sin evidencia → descartar.
 
 *Última actualización: 2026-08-22*

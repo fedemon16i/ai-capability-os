@@ -1,6 +1,6 @@
 # Handoff — 2026-08-22
 
-**Prioridad actual:** Skills curados e integrados. Flujo de uso documentado. Próximo: instalar skills en Claude Code + Playwright en portfolio.
+**Prioridad actual:** Skills instalados + Playwright configurado. Próximo: primer run de baselines + explorar skills en tarea real.
 
 ---
 

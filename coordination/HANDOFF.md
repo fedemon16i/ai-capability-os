@@ -1,45 +1,37 @@
 # Handoff — 2026-08-22
 
-**Prioridad actual:** cerrar detalles menores del sistema de contexto + debt de setup (VM / MCP) cuando Federico decida
+**Prioridad actual:** Research de skills/prompts reales del ecosistema (no reinventar) → consolidar Ponytails de ejecución
 
 ---
 
 ## Estado
 
-- ai-capability-os operativo (capabilities + arquitectura supervisada + CONTEXT-BRIEF + coordination)
-- federico-skills (Knowledge Center) con base sólida; STATUS ya apunta a CONTEXT-BRIEF
-- Canal de comunicación entre LLMs activo vía `coordination/`
+- Contexto compartido + coordination operativos
+- Knowledge Center en pausa de expansión (base ya útil)
+- Gap reconocido: muchas capabilities en papel; faltan skills de ejecución duros (tipo Ponytail) que impidan roturas
 
 ---
 
-## En curso / reciente
+## Próximo trabajo (Claude Code + research)
 
-- Grok revisó el sistema de contexto, escribió en AGENT-LOG, actualizó STATUS de federico-skills
-- Claude Code ya completó Token Efficiency, Dispatch, Agentic Design, Pendo, cloud-compute
+Investigar y catalogar **recursos existentes** (no inventar):
 
----
+| Rama | Fuentes |
+|------|--------|
+| Analytics | Pendo (prompts/skills oficiales), Mixpanel, PostHog, Hotjar |
+| Design / UI | Figma, tokens, handoff a dev, a11y |
+| Product | User stories → specs, QA, onboarding, modals |
+| Coding agents | Claude skills, Cursor, Replit, Factory AI, repos top GitHub |
+| Frontend/Backend | Patrones validados en GitHub (no skills viejos del portfolio sin evidencia) |
 
-## Próximo agente debe
-
-1. **Claude Code (si lee esto):**  
-   - Actualizar el footer de STATUS.md para que diga: leer CONTEXT-BRIEF → STATUS → HANDOFF (no solo STATUS → ARCHITECTURE → _index)  
-   - Opcional: agregar STATUS.md corto al portfolio apuntando al CONTEXT-BRIEF  
-   - No hace falta rehacer capabilities que ya existen
-
-2. **Cualquier LLM nuevo:**  
-   Leer CONTEXT-BRIEF.md → STATUS.md → coordination/HANDOFF.md → luego el repo del trabajo
-
-3. **Cuando Federico resuelva setup (VM / Claude Desktop):**  
-   Instalar Memory MCP y GitHub MCP según `capabilities/memory-mcp.md`
+**Reglas:**
+- Preferir fuentes oficiales / repos con adopción real
+- Si dos recursos dicen lo mismo → fusionar en uno
+- Objetivo: pocos skills duros, no inflar el índice a 100
+- Knowledge Center: no expandir ahora; consumir research cuando haya hallazgos
 
 ---
 
-## Blockers / Debt (no tocar hasta que Federico decida)
+## Debt (no tocar)
 
-| Item | Prioridad |
-|------|-----------|
-| Memory MCP / GitHub MCP install | Alta (espera setup) |
-| Hetzner VM | Media |
-| STATUS.md en portfolio | Baja |
-| Cross-links finos Knowledge ↔ Capabilities | Baja (debt) |
-| APIs externas, n8n, Lovable test real | Después |
+VM, MCP install, APIs, cross-links finos — cuando Federico decida.

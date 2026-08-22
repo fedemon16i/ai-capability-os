@@ -4,6 +4,20 @@ How the AI Capability OS is structured and why.
 
 ---
 
+## Sistema de contexto compartido
+
+El sistema tiene tres capas de contexto, en orden de lectura:
+
+| Archivo | Dónde | Para qué |
+|---------|-------|----------|
+| `CONTEXT-BRIEF.md` | Raíz de `ai-capability-os` | Punto de entrada global — cualquier LLM lo lee primero |
+| `STATUS.md` | Cada repo | Estado local de ese repo |
+| `coordination/HANDOFF.md` | `ai-capability-os` | Trabajo en curso, próximos pasos, blockers |
+
+**`coordination/`** es el canal entre LLMs y agentes. Lo que necesita handoff entre sesiones o entre LLMs va ahí — no en el chat.
+
+---
+
 ## Separación de repos — dónde vive cada cosa
 
 Federico trabaja con dos repositorios complementarios. Cualquier agente debe conocer esta separación antes de escribir en cualquiera de los dos.

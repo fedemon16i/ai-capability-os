@@ -70,6 +70,32 @@ Execute assigned subtasks. Return structured outputs. (In Claude Code Workflows)
 
 **8/10** — The Agent tool in Claude Code requires no infrastructure — fan-out is available immediately. The main investment is learning to decompose tasks correctly.
 
+## Roles formales en la arquitectura supervisada
+
+Esta arquitectura define quién hace qué en un ciclo de orquestación:
+
+| Rol | Responsabilidad | Permisos |
+|-----|-----------------|---------|
+| **Supervisor** | Define brief, asigna, revisa, acepta/rechaza, commit final, actualiza STATUS.md | Único con write al repo |
+| **Research Worker** | Investiga un dominio específico | Solo output estructurado |
+| **Curator Worker** | Compara, elimina ruido, scores | Solo output estructurado |
+| **Writer Worker** | Escribe el documento final según template | Solo output estructurado |
+| **Quality Guardian** | Verifica que el output cumpla principios del sistema | Puede vetar |
+
+**Regla de oro:** ningún Worker escribe directamente al repositorio.
+
+### Manejo de errores en orquestación
+
+| Error | Comportamiento |
+|-------|---------------|
+| Rate limit | Reintentar una vez con delay. Dos fallos → marcar BLOCKED en STATUS.md, continuar con otras tareas |
+| Output mal formado | Rechazo automático, reenviar con formato explícito |
+| Quality Guardian veta | Worker reescribe con razón específica. Max 2 iteraciones |
+| Outputs contradictorios | Supervisor resuelve explícitamente — nunca mezclar silenciosamente |
+| Fallo parcial (1 de N agentes) | Procesar los exitosos, documentar fallidos, re-agendar |
+
+---
+
 ## Six concepts Federico must own
 
 1. **Context window = working memory** — finite. Every agent starts fresh. Memory MCP and CLAUDE.md are how context persists.

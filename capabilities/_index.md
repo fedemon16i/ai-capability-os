@@ -8,6 +8,21 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 
 ---
 
+## Design Execution — nuevas capabilities (Framework Update 2026-08-22)
+
+| Capability | Status | Delegation | Score | File |
+|------------|--------|-----------|-------|------|
+| Session Replay (client-side) | **ADOPT** | 4/5 | 58/80 | [→](session-replay.md) |
+| UI Integrity Guardian | **ADOPT** | 5/5 | 62/80 | [→](ui-integrity-guardian.md) |
+
+## Product Intelligence — nuevas capabilities
+
+| Capability | Status | Delegation | Score | File |
+|------------|--------|-----------|-------|------|
+| User Story → Product Spec | **ADOPT** | 4/5 | 60/80 | [→](user-story-to-spec.md) |
+
+---
+
 ## AI Engineering
 
 | Capability | Status | Delegation | Score | File |
@@ -74,14 +89,14 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 
 ## Stats
 
-- Total capabilities tracked: 29
-- **ADOPT: 11**
+- Total capabilities tracked: 32
+- **ADOPT: 14**
 - **LEARN: 9**
 - **STUDY: 6**
 - **REFERENCE: 5**
 - **IGNORE: 1**
 
-Last updated: 2026-08-22
+Last updated: 2026-08-22 (Framework Update — arquitectura supervisada, 3 nuevas capabilities)
 
 ---
 

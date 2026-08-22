@@ -4,6 +4,27 @@ How the AI Capability OS is structured and why.
 
 ---
 
+## Separación de repos — dónde vive cada cosa
+
+Federico trabaja con dos repositorios complementarios. Cualquier agente debe conocer esta separación antes de escribir en cualquiera de los dos.
+
+| Repositorio | Qué contiene | URL |
+|-------------|-------------|-----|
+| **`ai-capability-os`** (este repo) | Capabilities de *ejecución*: cómo hacer cosas con AI, qué herramientas usar, cómo orquestar agentes, patterns operativos, Evaluation Framework, Research Protocol | `github.com/fedemon16i/ai-capability-os` |
+| **`federico-skills`** | Knowledge Center: conocimiento de dominio curado — Research Methods, Analytics, Product Testing, Agentic Design (teoría), Design Systems (teoría), etc. Frameworks conceptuales, no operativos | `github.com/fedemon16i/federico-skills` |
+
+### Regla de distinción
+
+**¿Es sobre cómo ejecutar algo con una herramienta o agente?** → va en `ai-capability-os`  
+**¿Es conocimiento de dominio que Federico aplica independientemente de la herramienta?** → va en `federico-skills`
+
+**Ejemplo:** "Cómo usar Playwright para visual regression" → `ai-capability-os`  
+**Ejemplo:** "Frameworks de research para testing de usabilidad" → `federico-skills`
+
+**Excepción:** capabilities como Agentic Design que son tanto conceptuales como ejecutables tienen un archivo en `ai-capability-os` (la parte ejecutable) y una referencia al Knowledge Center para la parte teórica.
+
+---
+
 ## Design decisions
 
 ### Why capabilities, not tools

@@ -8,6 +8,14 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 
 ---
 
+## Product Intelligence / Design — Agentic Design
+
+| Capability | Status | Delegation | Score | File |
+|------------|--------|-----------|-------|------|
+| Agentic Design | **ADOPT** | 2/5 | 58/80 | [→](agentic-design.md) |
+
+---
+
 ## Design Execution — nuevas capabilities (Framework Update 2026-08-22)
 
 | Capability | Status | Delegation | Score | File |
@@ -67,7 +75,7 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 | Visualping (competitive monitoring) | **LEARN** | 4/5 | 48/80 | [→](product-intelligence.md) |
 | Notion AI | **LEARN** | 3/5 | 44/80 | *(file pending)* |
 | Amplitude Automated Insights | **STUDY** | 2/5 | 38/80 | *(file pending — requires mature data infrastructure)* |
-| Pendo | **STUDY** | 2/5 | 34/80 | *(file pending — enterprise overhead)* |
+| Pendo | **ADOPT** (en proyectos con Pendo activo) | 3/5 | 52/80 | *(reclasificado — Federico tiene experiencia profunda en DollarCity + Chek; la expertise ya está pagada)* |
 | June.so / Amplitude B2B | **REFERENCE** | 2/5 | 30/80 | *(file pending)* |
 | ChatPRD | **REFERENCE** | 3/5 | 32/80 | *(Claude with project context is more flexible)* |
 
@@ -89,8 +97,8 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 
 ## Stats
 
-- Total capabilities tracked: 32
-- **ADOPT: 14**
+- Total capabilities tracked: 33
+- **ADOPT: 15** (incluyendo Agentic Design + Pendo reclasificado)
 - **LEARN: 9**
 - **STUDY: 6**
 - **REFERENCE: 5**

@@ -4,6 +4,16 @@ Historial de trabajo por agente/LLM. Más reciente primero.
 
 ---
 
+## 2026-08-26 — Claude Code (Research Cycle #2 + Pendo knowledge + Skills expansion)
+
+- **Pendo knowledge:** Scrapeó con Firecrawl MCP (conectado en sesión) 3 ebooks de Pendo, support.pendo.io, y blog LangSmith/Novus. Creó: `sources/pendo/novus-langsmith.md`, `sources/pendo/agent-analytics-kpis.md`, `sources/pendo/support-index.md`, README actualizado con mapa de clasificación. En `federico-skills`: enriqueció `onboarding-and-activation.md` (tipos guías + 4 benchmarks reales), creó `pendo-roi-business-case.md`, actualizó `pendo-patterns.md` con Novus + Agent Analytics.
+- **Skills instalados (portfolio):** `animate`, `review-animations`, `improve-animations` — emilkowalski/skills. Llenan el gap de auditoría de animaciones (CLAUDE.md tiene sistema de animación completo pero sin skill de revisión).
+- **Research infrastructure:** Creó `sources/research-protocol-runner.md` (protocolo + fuentes + pasos) y `sources/ecosystem-monitor.md` (Tier 1/2/3 de fuentes para estar al día).
+- **Skills discovery:** Encontró skills no documentados en mattpocock (`research`, `writing-for-agents`, `to-spec`, `triage`, etc.) y Anthropic plugins (`agent-sdk-dev`, `hookify`, `ralph-wiggum`, `security-guidance`).
+- **Repos clonados con push:** `ai-capability-os` y `federico-skills` ambos conectados con write access.
+- **Playwright:** Baselines pendientes — Federico pidió esperar (cambios en curso en el portfolio).
+- **Pendiente / siguiente:** Instalar `research` + `writing-for-agents` (mattpocock). Primer run del Research Cycle runner con Firecrawl. Scrape de tasteskill.dev cuando Firecrawl esté reconectado. Playwright baselines cuando Federico confirme.
+
 ## 2026-08-22 — Grok (paralelo a installs Claude)
 
 - Hizo: `sources/karpathy-autoresearch-pattern.md` — patrón edit→métrica→keep/discard + program.md; mapeo a coordination, Dispatch, UI Integrity. Sin correr ML/GPU.

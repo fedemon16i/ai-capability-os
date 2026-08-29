@@ -1,3 +1,36 @@
+# Handoff — 2026-08-29
+
+## Trabajo hecho en esta sesión (2026-08-29)
+
+**`federico-os`:**
+- `beats.html` — sistema de comentarios estilo Figma implementado (commit `df493b6`) — ver `context/BEATS-LOG.md`
+- `context/BEATS-LOG.md` creado — inventario de 47 beats, bug de timing documentado, dos opciones de fix
+- `context/ANIMATE-UI.md` creado — stack de animación recomendado, vocabulario estándar de 8 tipos
+- `README.md` actualizado con status de beats y DS Projects
+
+**`ai-capability-os`:**
+- `capabilities/product-ui-animation.md` creado — capability ADOPT (62/80), vocabulario de animación, herramientas evaluadas
+- `sources/ui-animation-resources.md` creado — 9 repos del framework evaluados, 5 libs de animación, 5 técnicas listas para implementar
+- `capabilities/_index.md` actualizado — 34 capabilities, 16 ADOPT
+
+**Repos evaluados (research agent — 2026-08-29):**
+
+| Repo | Verdict |
+|------|---------|
+| extract-design-system | REFERENCE — real CLI, útil para onboarding de clientes |
+| stylelift | REFERENCE — concepto correcto, 0 stars, esperar madurez |
+| uselayout/app | IGNORE — Next.js + Docker, overkill |
+| screenshot-to-design-system | IGNORE — 4 commits, no confiable |
+| html-figma / HTML-to-Design | IGNORE — prototipos muertos |
+| mimic-ai | REFERENCE — MCP + Figma DS enforcer, no aplica aún |
+| story-ui / storysync | IGNORE — Storybook/React dependency |
+
+**Decisión pendiente de Federico:**
+- `beats.html` timing fix: Option A (postMessage handshake, 2-3h) vs Option B (beats nativos sin iframes, 6-8h)
+- DS Projects page: segunda página en `federico-os` — pendiente de definir scope
+
+---
+
 # Handoff — 2026-08-22
 
 **Prioridad actual:** Skills instalados + Playwright configurado. Próximo: primer run de baselines + explorar skills en tarea real.

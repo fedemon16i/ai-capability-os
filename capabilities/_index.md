@@ -23,6 +23,7 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 | Session Replay (client-side) | **ADOPT** | 4/5 | 58/80 | [→](session-replay.md) |
 | UI Integrity Guardian | **ADOPT** | 5/5 | 62/80 | [→](ui-integrity-guardian.md) |
 | Product UI Animation & Showcase | **ADOPT** | 4/5 | 62/80 | [→](product-ui-animation.md) |
+| UX Portfolio Storytelling | **ADOPT** | 3/5 | 58/80 | [→](ux-portfolio-storytelling.md) |
 
 ## Product Intelligence — nuevas capabilities
 
@@ -100,14 +101,14 @@ Last research cycle: **2026-08-22 (Cycle #1 — initial sweep, all 5 domains cov
 
 ## Stats
 
-- Total capabilities tracked: 34
-- **ADOPT: 16** (+ Product UI Animation & Showcase)
+- Total capabilities tracked: 35
+- **ADOPT: 17** (+ Product UI Animation, + UX Portfolio Storytelling)
 - **LEARN: 9**
 - **STUDY: 6**
 - **REFERENCE: 5**
 - **IGNORE: 1**
 
-Last updated: 2026-08-29 (Cycle #2 partial — Product UI Animation capability añadida)
+Last updated: 2026-08-29 (Cycle #2 partial — 2 capabilities nuevas: animación + storytelling)
 
 ---
 

@@ -6,6 +6,57 @@
 
 ---
 
+## Native browser APIs (2024–26 — no library needed)
+
+### CSS Scroll-Driven Animations
+```css
+/* Native — Chrome 115+, Firefox 125+, Safari 18+ */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+.beat-row {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+```
+**Fallback (all browsers):** IntersectionObserver — runs off main thread, far more performant than scroll event listeners.
+
+### View Transitions API — shared-element morphing
+```js
+// Chrome 114+, Firefox 129+, Safari 17+
+// Mark shared element:
+el.style.viewTransitionName = 'beat-panel';
+
+// Trigger transition:
+document.startViewTransition(() => {
+  showNextBeat(); // DOM update happens here
+});
+```
+CSS to control the morphed element:
+```css
+::view-transition-old(beat-panel),
+::view-transition-new(beat-panel) {
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(.34,1.56,.64,1);
+}
+```
+This is the correct tool for beat-to-beat transitions where an element visually persists (e.g., a card expanding from the list into the detail view).
+
+### Transform-scale zoom (NOT CSS zoom)
+```css
+/* NEVER use zoom: — it participates in layout and is not animatable */
+/* ALWAYS use: */
+.spotlight {
+  transform: scale(2.5);
+  transform-origin: 60% 30%; /* anchor to the element being highlighted */
+  transition: transform 500ms cubic-bezier(.34,1.56,.64,1);
+}
+```
+
+---
+
 ## Framework doc repos — evaluated
 
 Source document: `product_ui_reconstruction_design_system_framework.md` (uploaded by Federico 2026-08-29).
